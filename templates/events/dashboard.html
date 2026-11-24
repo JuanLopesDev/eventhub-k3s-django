@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% block title %}Dashboard{% endblock %}{% block content %}
+<section class="hero"><div><p class="eyebrow">GERENCIAMENTO DE EVENTOS</p><h1>Organize cada momento.</h1><p>Cadastre, acompanhe e mantenha seus eventos em um só lugar.</p><a class="button" href="{% url 'events:create' %}">Cadastrar evento</a></div><div class="metric"><strong>{{ total }}</strong><span>eventos cadastrados</span></div></section>
+<section class="card"><div class="section-head"><h2>Próximos eventos</h2><a href="{% url 'events:list' %}">Ver todos</a></div>{% if upcoming %}<ul class="event-cards">{% for event in upcoming %}<li><span>{{ event.date|date:'d/m' }}</span><div><a href="{% url 'events:detail' event.pk %}">{{ event.name }}</a><small>{{ event.location }} · {{ event.time|time:'H:i' }}</small></div><em>{{ event.get_status_display }}</em></li>{% endfor %}</ul>{% else %}<p>Nenhum evento cadastrado ainda.</p>{% endif %}</section>
+<p class="pod-indicator">Respondido pelo Pod: <code>{{ pod_name }}</code></p>{% endblock %}
+

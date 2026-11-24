@@ -1,0 +1,2 @@
+{% extends 'base.html' %}{% block content %}<div class="form-card"><p class="eyebrow">ATENÇÃO</p><h1>Excluir “{{ event.name }}”?</h1><p>Esta ação não pode ser desfeita.</p><form method="post">{% csrf_token %}<div class="actions"><a href="{% url 'events:detail' event.pk %}">Cancelar</a><button class="button danger-button">Excluir evento</button></div></form></div>{% endblock %}
+

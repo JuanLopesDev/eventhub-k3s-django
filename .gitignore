@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+k8s/01-secret.yaml
+.venv/
+__pycache__/
+*.py[cod]
+db.sqlite3
+staticfiles/
+.pytest_cache/
+*.log
+*.pem
+eventhub-k3s-django.zip
+
