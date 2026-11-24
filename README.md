@@ -157,3 +157,8 @@ Entregue: código-fonte, Dockerfile, manifests YAML, print da aplicação/cadast
 - `01-secret.yaml` é deliberadamente ignorado pelo Git; aplique-o no cluster sem versionar credenciais.
 - Para gerar uma chave Django: `python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"`.
 - Em produção, use `DEBUG=False`, hosts explícitos, HTTPS e um armazenamento CSI; este repositório é orientado ao laboratório acadêmico.
+
+## Autores
+
+- Juan Lopes Silverio
+- Marcelo Henrique Costa
